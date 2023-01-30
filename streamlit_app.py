@@ -25,6 +25,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # streamlit.dataframe(my_fruit_list)
 streamlit.dataframe(fruits_to_show)
 
+streamlit.stop()
 # create the repeatable code block (called a function)
 def get_fruityvice_data(this_fruit_choice):
    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
@@ -82,7 +83,7 @@ streamlit.stop()
 #streamlit.text("The fruit load list contains:")
 #streamlit.text(my_data_row)
 #streamlit.dataframe(my_data_row)
-streamlit.stop()
+
 
 
 # Allow the end user to add a fruit to the list
