@@ -31,8 +31,7 @@ def get_fruityvice_data(this_fruit_choice):
    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
    return fruityvice_normalized
     
-# New section to display fruityvice api response
-# import requests
+# New section to display fruityvice api response, # import requests
 streamlit.header("Fruityvice Fruit Advice!")
 try:
 # fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
@@ -68,7 +67,9 @@ def get_fruit_load_list():
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    my_data_rows = get_fruit_load_list()
    streamlit.dataframe(my_data_rows)
-   
+
+ streamlit.stop()
+
 # my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 # my_cur = my_cnx.cursor()
 # my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
